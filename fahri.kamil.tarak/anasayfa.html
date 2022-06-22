@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="anasayfa.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="menubar">
+            <img src="/img/ikon.png" alt="" class="icon">
+            <a href="#" class="menubutton">Anasayfa</a>
+            <a href="#" class="menubutton">Hakkımızda</a>
+            <a href="#" class="menubutton">İletisim</a>
+            <a href="#" class="menubutton">Urunler</a>
+            <a href="#" class="menubutton">şubeler</a>
+        </div>
+    </nav>
+
+    <div class="sayfa">
+        <div class="sliderKonum">
+            <div class="slider">
+                <a class="img-bir" href="img/foto1.jpg">
+                    <img src="img/foto2.png" alt="resim">
+                </a>
+                <a class="img-iki" href="img/foto3.png">
+                    <img src="img/foto4.jpg" alt="resim">
+                </a>
+                <a class="img-uc" href="img/foto4.png">
+                    <img src="img/foto5.png" alt="resim"> 
+                </a>
+            </div>
+        </div>
+    </div>
+
+   <div class="form-control">
+    <form action="" id="form1" onkeyup="control('form1')">
+        <input type="text" placeholder="isim" required><br>
+        <input type="text" placeholder="soyisim"required><br>
+        <input type="email" placeholder="email"required><br>
+        <input type="password" placeholder="şifre" required><br>
+        <button type="submit" >gönder</button>
+    </form>
+
+   </div>
+    <script>
+        function control(formId) {
+            let invalids = document.getElementById(formId).querySelectorAll(':invalid').length,
+            button = document.getElementById(formId).querySelector('button[type="submit"]');
+
+            if(invalids == 0){
+                button.removeAttribute('disabled');
+            }else{
+                button.setAttribute('disabled','disabled');
+            }
+        }
+        control('form1');
+    </script>
+</body>
+</html>
